@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Seguridad - Instalación, Redes y Ciberseguridad</title>
+    <!-- Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-black font-sans">
+
+    <!-- Barra de Navegación -->
+    <header class="bg-black text-white shadow-md sticky top-0 z-50 border-b-2 border-red-600">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-bold tracking-wider text-red-600">MÁS <span class="text-white">SEGURIDAD</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-white">
+                <a href="#servicios" class="hover:text-red-500 transition">Servicios</a>
+                <a href="#detalles-tecnicos" class="hover:text-red-500 transition">Especificaciones</a>
+            </nav>
+            <button onclick="toggleModal(true)" class="bg-red-600 hover:bg-red-700 text-white font-bold px-5 py-2 rounded-full shadow-lg transition transform hover:scale-105">
+                Solicitar Servicio
+            </button>
+        </div>
+    </header>
+
+    <!-- Sección Hero / Presentación Principal -->
+    <section id="inicio" class="relative bg-black text-white py-20 px-4 overflow-hidden border-b-4 border-red-600">
+        <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1600');"></div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-6">
+                <span class="bg-red-600 text-white font-bold text-xs uppercase px-3 py-1 rounded-full tracking-widest">Soluciones Tecnológicas Integrales</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white">
+                    Protección y Conectividad <span class="text-red-600">Avanzada</span>
+                </h1>
+                <p class="text-lg text-gray-300">
+                    Especialistas en seguridad electrónica, redes corporativas/domésticas, electricidad y soporte técnico especializado para hogares y empresas.
+                </p>
+                <div>
+                    <button onclick="toggleModal(true)" class="bg-red-600 hover:bg-red-700 text-white font-black text-lg px-8 py-4 rounded-xl shadow-xl transition transform hover:scale-105 inline-flex items-center space-x-2">
+                        <span>Solicitar Servicio</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=1000" alt="Tecnología y Seguridad" class="rounded-2xl shadow-2xl border-4 border-red-600 object-cover h-[400px] w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios Principales -->
+    <section id="servicios" class="py-16 max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-black">Nuestros <span class="text-red-600">Servicios</span></h2>
+        <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">Soluciones profesionales diseñadas para garantizar la máxima eficiencia, confort y resguardo tecnológico en tu espacio.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Servicio 1 -->
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden hover:border-red-600 transition">
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=600" alt="Cámaras de Seguridad" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <div class="text-red-600 text-2xl mb-3"><i class="fas fa-video"></i></div>
+                    <h3 class="font-bold text-xl mb-2 text-black">Cámaras de Seguridad</h3>
+                    <p class="text-gray-700 text-sm">Instalación y configuración de circuitos cerrados (CCTV), cámaras IP de alta definición, visión nocturna y monitoreo remoto desde el celular.</p>
+                </div>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden hover:border-red-600 transition">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=600" alt="Domótica" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <div class="text-red-600 text-2xl mb-3"><i class="fas fa-home"></i></div>
+                    <h3 class="font-bold text-xl mb-2 text-black">Sistemas de Domótica</h3>
+                    <p class="text-gray-700 text-sm">Automatización del hogar inteligente: iluminación controlada por voz, cerraduras electrónicas, sensores de movimiento y gestión energética eficiente.</p>
+                </div>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden hover:border-red-600 transition">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600" alt="Instalación Eléctrica" class="h-48 w-full object-cover">
+                <div class="p-6">
+                    <div class="text-red-600 text-2xl mb-3"><i class="fas fa-bolt"></i></div>
+                    <h3 class="font-bold text-xl mb-2 text-black">Electricidad Domiciliaria</h3>
+                    <p class="text-gray-700 text-sm">Mantención preventiva y correctiva, tableros eléctricos certificados, instalación de protecciones diferenciales, automáticos y cableado estructurado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles Técnicos Avanzados -->
+    <section id="detalles-tecnicos" class="bg-gray-100 py-16 px-4 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-black">Especificaciones y <span class="text-red-600">Soporte Técnico</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- PC Mantenimiento -->
+                <div class="bg-white p-6 rounded-xl shadow border-l-4 border-black">
+                    <div class="text-black text-xl mb-2"><i class="fas fa-laptop-code"></i></div>
+                    <h4 class="font-bold text-lg text-black mb-1">Mantenimiento de Computadoras</h4>
+                    <p class="text-sm text-gray-700">Limpieza física de componentes, cambio de pasta térmica de alto rendimiento, optimización de sistemas operativos, respaldos y eliminación de malware.</p>
+                </div>
+                <!-- Redes -->
+                <div class="bg-white p-6 rounded-xl shadow border-l-4 border-red-600">
+                    <div class="text-red-600 text-xl mb-2"><i class="fas fa-network-wired"></i></div>
+                    <h4 class="font-bold text-lg text-black mb-1">Redes en General</h4>
+                    <p class="text-sm text-gray-700">Diseño, certificación y armado de cableado estructurado Cat6/Cat7, configuración de routers avanzados, switches administrables y puntos de acceso Wi-Fi de largo alcance.</p>
+                </div>
+                <!-- Ciberseguridad -->
+                <div class="bg-white p-6 rounded-xl shadow border-l-4 border-black">
+                    <div class="text-black text-xl mb-2"><i class="fas fa-shield-alt"></i></div>
+                    <h4 class="font-bold text-lg text-black mb-1">Ciberseguridad</h4>
+                    <p class="text-sm text-gray-700">Implementación de cortafuegos (Firewalls), políticas de control de acceso, encriptación de datos, auditorías básicas de vulnerabilidades y protección de redes perimetrales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Contratación / Solicitud de Servicio -->
+    <div id="contractModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative transform transition-all border-t-4 border-red-600">
+            <button onclick="toggleModal(false)" class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl font-bold">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="text-center mb-6">
+                <span class="text-2xl font-black text-black tracking-wider">MÁS <span class="text-red-600">SEGURIDAD</span></span>
+                <h3 class="text-xl font-bold text-black mt-2">Solicitar Cotización o Servicio</h3>
+                <p class="text-xs text-gray-600 mt-1">Completa tus datos y nos pondremos en contacto contigo a la brevedad.</p>
+            </div>
+
+            <form action="https://formsubmit.co/electricidad.morales2030@gmail.com" method="POST" class="space-y-4">
+                <input type="hidden" name="_subject" value="Nueva solicitud de servicio - Más Seguridad">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
+                
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-black mb-1">Nombre Completo</label>
+                    <input type="text" name="nombre_cliente" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600 text-sm text-black" placeholder="Tu nombre">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-black mb-1">Correo Electrónico</label>
+                    <input type="email" name="correo_cliente" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600 text-sm text-black" placeholder="tucorreo@ejemplo.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-black mb-1">Número de Teléfono</label>
+                    <input type="tel" name="telefono_cliente" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600 text-sm text-black" placeholder="+56 9 1234 5678">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-black mb-1">Servicio Requerido</label>
+                    <select name="servicio_interes" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600 text-sm text-black">
+                        <option value="Cámaras de Seguridad">Cámaras de Seguridad (CCTV)</option>
+                        <option value="Domótica">Sistemas de Domótica</option>
+                        <option value="Electricidad Domiciliaria">Instalación / Mantención Eléctrica</option>
+                        <option value="Mantenimiento de PCs">Mantenimiento de Computadoras</option>
+                        <option value="Redes">Redes en General</option>
+                        <option value="Ciberseguridad">Ciberseguridad</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl shadow-lg transition transform hover:scale-[1.02]">
+                    Enviar solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script de apertura y cierre del formulario -->
+    <script>
+        function toggleModal(show) {
+            const modal = document.getElementById('contractModal');
+            if (show) {
+                modal.classList.remove('hidden');
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
